@@ -202,7 +202,7 @@ class MyAssistant:
 
                         logging.info('You said: "%s"' % text)
                         text = text.lower()
-                        if 'choix de la langue' in text:
+                        if 'langue' in text:
                             #board.led.state = Led.ON
                             lang_full = text[18:]
                             lang_full = lang_full.strip()
@@ -266,7 +266,8 @@ def corresp_lang(lang):
     }.get(lang, "en")
         
 
-def translate_text(self, text="YOUR_TEXT_TO_TRANSLATE", project_id="voice-assistant-284119"):
+#def translate_text(self, text="YOUR_TEXT_TO_TRANSLATE", project_id="voice-assistant-284119"):
+def translate_text(self, text="YOUR_TEXT_TO_TRANSLATE", project_id="assistant-vocal-367510"):
     """Translating Text."""
 
     client = translate.TranslationServiceClient()
