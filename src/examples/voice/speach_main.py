@@ -204,7 +204,10 @@ class MyAssistant:
                         text = text.lower()
                         if 'langue' in text:
                             #board.led.state = Led.ON
-                            lang_full = text[18:]
+                            idx_lang = text.index('langue')
+                            logging.info(idx_lang)
+                            lang_full = text[idx_lang+7:]
+                            logging.info(lang_full)
                             lang_full = lang_full.strip()
                             self._foreign_lang = corresp_lang(lang_full)
                             self._who_is_speaking = 0
